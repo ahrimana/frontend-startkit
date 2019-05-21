@@ -23,4 +23,16 @@ export default class UserStore {
          email: 'example@email.com',
        },
 	]
+	
+	@observable detail = {
+		id: 5,
+		email: 'c@c.com',
+	}
+	
+	fetchAll () {
+		this.list.push({
+			id:Math.random(),
+			email:'c@c.com',
+		})
+	}
 }

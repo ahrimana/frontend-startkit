@@ -28,4 +28,10 @@ export default class BlogStore {
          text:'lorem ipsum5',
        },
 	]
+	
+	@observable detail = {
+		id: 1,
+		title: 'Naslov',
+		text: 'Text',
+	}
 }

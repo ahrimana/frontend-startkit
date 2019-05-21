@@ -8,6 +8,7 @@ import Landing from 'pages/landing'
 import About from 'pages/about'
 import Login from 'pages/login'
 import Blog from 'pages/blog'
+import BlogDetail from 'pages/blog/detail'
 import NoPage from 'pages/nopage'
 
 import theme from 'theme'
@@ -22,6 +23,7 @@ export default class App extends Component {
             <Route exact path="/" component={Dashboard} />
             <Route exact path="/landing" component={Landing} />
             <Route exact path="/blog" component={Blog} />
+            <Route exact path="/blog/:id" component={BlogDetail} />
             <Route exact path="/about" component={About} />
             <Route exact path="/login" component={Login} />
             <Route path="*" component={NoPage} />

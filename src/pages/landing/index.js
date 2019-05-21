@@ -17,10 +17,7 @@ class Landing extends Component {
   }
 
   handleClick = () => {
-    store.user.list.push({
-	  id:5,
-	  email:'test@mail.com',
-	})
+    store.user.fetchAll()
   }
 
   render() {

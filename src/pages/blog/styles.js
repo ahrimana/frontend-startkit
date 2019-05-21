@@ -26,7 +26,16 @@ export default {
 
     lista: {
         width: '80%',
-    }
-
+    },
+    
+    detail: {
+        width: 'calc(100% - 40px)',
+        height: 'calc(100vh - 74px - 40px)',
+        padding: 20,
+     },
+     
+     title: {
+		 textAlign:'center',
+	 },
 
 }
