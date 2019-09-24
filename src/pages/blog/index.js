@@ -4,7 +4,6 @@ import { observer } from 'mobx-react';
 import Template from 'templates/default';
 import store from 'store';
 import Button from '@material-ui/core/Button';
-import List from '@material-ui/core/List';
 import styles from './styles';
 import TildaButton from 'components/atoms/tilda-button';
 import BlogStripe from 'components/organisms/blog-stripe';
@@ -25,7 +24,7 @@ class Blog extends Component {
   }
 
   render() {
-      const usersVeiw = store.blog.list.map((blog) => {
+      const blogsVeiw = store.blog.list.map((blog) => {
           return (
               <BlogStripe blog={blog} key={blog.id}/>
           )
@@ -35,16 +34,19 @@ class Blog extends Component {
       <Template style={{}}>
         <div style={styles.content}>
           <div className="wrapper">
-            <h1>Welcome to Maja Mekic Photography</h1>
+            <h1>Photography Blog</h1>
             <h3>Lorem ipsum dolor est satum itc serum</h3>
             <Button variant="contained" color="secondary" onClick={this.handleClick}>
                 Hello World!
             </Button>
             <TildaButton style={styles.tb}>Tilda</TildaButton>
           </div>
-            <List style={styles.lista}>
-              {usersVeiw}
-            </List>
+            <div style={styles.lista}>
+              {blogsVeiw}
+              <div style={styles.lista.div}>
+                Nesto
+              </div>
+            </div>
         </div>
       </Template>
     )
