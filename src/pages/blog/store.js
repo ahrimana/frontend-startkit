@@ -1,5 +1,6 @@
 import { observable } from 'mobx'
 import backgroundImage from './cvece.jpg'
+import service from './service'
 
 export default class BlogStore {
 	@observable list = [
@@ -41,4 +42,19 @@ export default class BlogStore {
 		title: 'Naslov',
 		text: 'Text',
 	}
+  fetch = async(id) => {
+    try{
+      const response = await service.fetch(id)
+      this.detail = response
+      return {
+        ...response,
+        status: 200,
+      }
+    }catch(error){
+      return {
+        ...error,
+        status: error.response.status,
+      }
+    }
+  }
 }
