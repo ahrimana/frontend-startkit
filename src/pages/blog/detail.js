@@ -12,15 +12,15 @@ class BlogDeatil extends React.Component {
     store.blog.fetch(id)
   }
   render () {
-	return (
-    <Template style={{}}>
-      <div style={styles.detail}>
-        <h1 style={styles.title}>{store.blog.detail.title}</h1>
-        <div>
-         {store.blog.detail.text}
+	  return (
+      <Template style={{}}>
+        <div style={styles.detail}>
+          <h1 style={styles.title}>{store.blog.detail.title}</h1>
+          <div>
+           {store.blog.detail.text}
+          </div>
         </div>
-      </div>
-    </Template>
+      </Template>
    )
   }
 }

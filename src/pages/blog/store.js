@@ -38,9 +38,9 @@ export default class BlogStore {
 	]
 	
 	@observable detail = {
-		id: 1,
-		title: 'Naslov',
-		text: 'Text',
+		id: 0,
+		title: '',
+		text: '',
 	}
   fetch = async(id) => {
     try{
