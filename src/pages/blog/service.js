@@ -9,6 +9,21 @@ async function fetch(id){
   )
   return response.data
 }
+
+async function create(title){
+  const csrf = getCookie ('csrf_access_token')
+  const response = await axios.post(
+    `${API_ROOT}/blog`,
+    { 
+      title,
+      text: '',
+    },
+    { headers: {'X-CSRF-TOKEN':csrf}},
+  )
+  return response.data
+}
+
 export default {
   fetch,
+  create,
 }

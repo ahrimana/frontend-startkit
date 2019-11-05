@@ -57,4 +57,19 @@ export default class BlogStore {
       }
     }
   }
+  create = async(title) => {
+    try{
+      const response = await service.create(title)
+      this.detail = response
+      return {
+        ...response,
+        status: 200,
+      }
+    }catch(error){
+      return {
+        ...error,
+        status: error.response.status,
+      }
+    }
+  }
 }
